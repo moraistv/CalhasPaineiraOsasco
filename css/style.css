@@ -1897,3 +1897,111 @@ html {
         -webkit-tap-highlight-color: transparent;
     }
 }
+
+
+/* ========================================
+   AJUSTES MOBILE - TOP BAR E MENU LATERAL
+======================================== */
+
+/* Ocultar top bar no mobile */
+@media (max-width: 767.98px) {
+    .top-bar {
+        display: none !important;
+    }
+    
+    /* Ajustar navbar para não ficar espaço */
+    .navbar {
+        top: 0 !important;
+    }
+}
+
+/* Menu lateral off-canvas no mobile */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        position: fixed !important;
+        top: 0 !important;
+        right: -100% !important;
+        width: 280px !important;
+        height: 100vh !important;
+        background: var(--white) !important;
+        box-shadow: -5px 0 30px rgba(0,0,0,0.2) !important;
+        border-radius: 0 !important;
+        margin-top: 0 !important;
+        padding: 80px 20px 20px !important;
+        transition: right 0.3s ease-in-out !important;
+        z-index: 1040 !important;
+        overflow-y: auto !important;
+        display: block !important;
+        max-height: 100vh !important;
+    }
+    
+    .navbar-collapse.show {
+        right: 0 !important;
+    }
+    
+    /* Overlay escuro quando menu abre */
+    .navbar-collapse::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: -1;
+    }
+    
+    .navbar-collapse.show::before {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    /* Ajustar itens do menu */
+    .navbar-nav {
+        width: 100%;
+    }
+    
+    .nav-item {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .nav-link {
+        padding: 15px 0 !important;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .nav-link::after {
+        content: '\F285'; /* Bootstrap icon arrow */
+        font-family: 'bootstrap-icons';
+        font-size: 0.8rem;
+        color: var(--primary);
+    }
+    
+    /* Botão de fechar no menu */
+    .navbar-toggler {
+        z-index: 1050;
+        position: relative;
+    }
+    
+    /* Botão orçamento no menu lateral */
+    .btn-orcamento {
+        width: 100%;
+        margin-top: 20px;
+        padding: 15px !important;
+        font-size: 1rem;
+    }
+}
+
+/* Ajuste do navbar quando não há top bar */
+@media (max-width: 767.98px) {
+    .navbar {
+        padding: 12px 0;
+    }
+}
