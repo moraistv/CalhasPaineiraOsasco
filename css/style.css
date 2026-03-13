@@ -1923,7 +1923,7 @@ html {
         right: -100% !important;
         width: 280px !important;
         height: 100vh !important;
-        background: var(--white) !important;
+        background: #ffffff !important;
         box-shadow: -5px 0 30px rgba(0,0,0,0.2) !important;
         border-radius: 0 !important;
         margin-top: 0 !important;
@@ -1966,7 +1966,7 @@ html {
     
     .nav-item {
         width: 100%;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid rgba(30,90,142,0.2);
     }
     
     .nav-link {
