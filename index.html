@@ -113,7 +113,8 @@
     <!-- ========================================
          CSS EXTERNO
     ======================================== -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"></noscript>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -689,13 +690,16 @@
         </div>
     </nav>
 
+    <!-- Conteúdo Principal -->
+    <main id="main-content">
+
     <!-- Hero Section -->
     <section id="home" class="hero-section">
         <div class="swiper hero-swiper">
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
-                    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920');">
+                    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920');" fetchpriority="high">
                         <div class="hero-overlay"></div>
                         <div class="container h-100">
                             <div class="row h-100 align-items-center">
@@ -834,7 +838,7 @@
                                 </div>
                             </div>
                             <div class="produto-content">
-                                <h4>Calhas</h4>
+                                <h3>Calhas</h3>
                                 <p>Sistema eficiente para captação e condução de águas pluviais.</p>
                             </div>
                         </div>
@@ -849,7 +853,7 @@
                                 </div>
                             </div>
                             <div class="produto-content">
-                                <h4>Rufos</h4>
+                                <h3>Rufos</h3>
                                 <p>Proteção e vedação eficiente para coberturas e estruturas.</p>
                             </div>
                         </div>
@@ -864,7 +868,7 @@
                                 </div>
                             </div>
                             <div class="produto-content">
-                                <h4>Dutos e Curvas</h4>
+                                <h3>Dutos e Curvas</h3>
                                 <p>Componentes essenciais para sistemas de ventilação e exaustão.</p>
                             </div>
                         </div>
@@ -879,7 +883,7 @@
                                 </div>
                             </div>
                             <div class="produto-content">
-                                <h4>Chapéu Chinês</h4>
+                                <h3>Chapéu Chinês</h3>
                                 <p>Proteção inteligente para sua chaminé.</p>
                             </div>
                         </div>
@@ -894,7 +898,7 @@
                                 </div>
                             </div>
                             <div class="produto-content">
-                                <h4>Exaustor Eólico</h4>
+                                <h3>Exaustor Eólico</h3>
                                 <p>Ventilação eficiente sem consumo de energia.</p>
                             </div>
                         </div>
@@ -909,7 +913,7 @@
                                 </div>
                             </div>
                             <div class="produto-content">
-                                <h4>Coifas</h4>
+                                <h3>Coifas</h3>
                                 <p>Eficiência e resistência para sistemas de exaustão.</p>
                             </div>
                         </div>
@@ -1165,7 +1169,7 @@
                             <div class="servico-icon">
                                 <i class="bi bi-scissors"></i>
                             </div>
-                            <h4>Corte e Dobra</h4>
+                            <h3>Corte e Dobra</h3>
                             <p>Precisão dimensional e conformação profissional para sistemas de drenagem eficientes.</p>
                             <a href="#orcamento" class="btn btn-outline-primary btn-sm">Solicitar <i class="bi bi-arrow-right"></i></a>
                         </div>
@@ -1176,7 +1180,7 @@
                             <div class="servico-icon">
                                 <i class="bi bi-tools"></i>
                             </div>
-                            <h4>Instalação Profissional</h4>
+                            <h3>Instalação Profissional</h3>
                             <p>Montagem especializada para desempenho hidráulico e proteção estrutural.</p>
                             <a href="#orcamento" class="btn btn-outline-primary btn-sm">Solicitar <i class="bi bi-arrow-right"></i></a>
                         </div>
@@ -1187,7 +1191,7 @@
                             <div class="servico-icon">
                                 <i class="bi bi-wrench-adjustable"></i>
                             </div>
-                            <h4>Manutenção Preventiva</h4>
+                            <h3>Manutenção Preventiva</h3>
                             <p>Inspeção, diagnóstico e reparos para máxima eficiência do sistema pluvial.</p>
                             <a href="#orcamento" class="btn btn-outline-primary btn-sm">Solicitar <i class="bi bi-arrow-right"></i></a>
                         </div>
@@ -1198,7 +1202,7 @@
                             <div class="servico-icon">
                                 <i class="bi bi-droplet"></i>
                             </div>
-                            <h4>Limpeza e Desobstrução</h4>
+                            <h3>Limpeza e Desobstrução</h3>
                             <p>Remoção de resíduos para garantir eficiência no escoamento pluvial.</p>
                             <a href="#orcamento" class="btn btn-outline-primary btn-sm">Solicitar <i class="bi bi-arrow-right"></i></a>
                         </div>
@@ -1209,7 +1213,7 @@
                             <div class="servico-icon">
                                 <i class="bi bi-chat-square-text"></i>
                             </div>
-                            <h4>Consultoria Especializada</h4>
+                            <h3>Consultoria Especializada</h3>
                             <p>Análise profissional para projetos mais eficientes e adequados.</p>
                             <a href="#orcamento" class="btn btn-outline-primary btn-sm">Solicitar <i class="bi bi-arrow-right"></i></a>
                         </div>
@@ -1237,7 +1241,7 @@
                     <div class="portfolio-item">
                         <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400" alt="Obra 1" class="img-fluid">
                         <div class="portfolio-overlay">
-                            <h5>Residencial Osasco</h5>
+                            <h3>Residencial Osasco</h3>
                             <p>Calhas e Rufos</p>
                         </div>
                     </div>
@@ -1246,7 +1250,7 @@
                     <div class="portfolio-item">
                         <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400" alt="Obra 2" class="img-fluid">
                         <div class="portfolio-overlay">
-                            <h5>Comercial Barueri</h5>
+                            <h3>Comercial Barueri</h3>
                             <p>Exaustores Eólicos</p>
                         </div>
                     </div>
@@ -1255,7 +1259,7 @@
                     <div class="portfolio-item">
                         <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400" alt="Obra 3" class="img-fluid">
                         <div class="portfolio-overlay">
-                            <h5>Industrial Guarulhos</h5>
+                            <h3>Industrial Guarulhos</h3>
                             <p>Sistema Completo</p>
                         </div>
                     </div>
@@ -1264,7 +1268,7 @@
                     <div class="portfolio-item">
                         <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400" alt="Obra 4" class="img-fluid">
                         <div class="portfolio-overlay">
-                            <h5>Residencial Santana</h5>
+                            <h3>Residencial Santana</h3>
                             <p>Dutos e Coifas</p>
                         </div>
                     </div>
@@ -1273,7 +1277,7 @@
                     <div class="portfolio-item">
                         <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400" alt="Obra 5" class="img-fluid">
                         <div class="portfolio-overlay">
-                            <h5>Comercial Osasco</h5>
+                            <h3>Comercial Osasco</h3>
                             <p>Calhas Galvanizadas</p>
                         </div>
                     </div>
@@ -1282,7 +1286,7 @@
                     <div class="portfolio-item">
                         <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400" alt="Obra 6" class="img-fluid">
                         <div class="portfolio-overlay">
-                            <h5>Industrial Carapicuíba</h5>
+                            <h3>Industrial Carapicuíba</h3>
                             <p>Ventilação</p>
                         </div>
                     </div>
@@ -1291,7 +1295,7 @@
                     <div class="portfolio-item">
                         <img src="https://images.unsplash.com/photo-1632823471565-1ecdf5c6b7e4?w=400" alt="Obra 7" class="img-fluid">
                         <div class="portfolio-overlay">
-                            <h5>Residencial Alphaville</h5>
+                            <h3>Residencial Alphaville</h3>
                             <p>Rufos Personalizados</p>
                         </div>
                     </div>
@@ -1300,7 +1304,7 @@
                     <div class="portfolio-item">
                         <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400" alt="Obra 8" class="img-fluid">
                         <div class="portfolio-overlay">
-                            <h5>Restaurante Centro</h5>
+                            <h3>Restaurante Centro</h3>
                             <p>Coifa Industrial</p>
                         </div>
                     </div>
@@ -1324,7 +1328,7 @@
                         <div class="depoimento-header">
                             <div class="depoimento-avatar">LB</div>
                             <div class="depoimento-info">
-                                <h6>Leo Bonotto</h6>
+                                <h3>Leo Bonotto</h3>
                                 <small class="text-muted">1 ano atrás</small>
                             </div>
                             <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" class="google-logo">
@@ -1344,7 +1348,7 @@
                         <div class="depoimento-header">
                             <div class="depoimento-avatar">AF</div>
                             <div class="depoimento-info">
-                                <h6>Adriana Freitas</h6>
+                                <h3>Adriana Freitas</h3>
                                 <small class="text-muted">1 ano atrás</small>
                             </div>
                             <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" class="google-logo">
@@ -1364,7 +1368,7 @@
                         <div class="depoimento-header">
                             <div class="depoimento-avatar">AA</div>
                             <div class="depoimento-info">
-                                <h6>Antonio Araujo</h6>
+                                <h3>Antonio Araujo</h3>
                                 <small class="text-muted">1 ano atrás</small>
                             </div>
                             <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" class="google-logo">
@@ -1384,7 +1388,7 @@
                         <div class="depoimento-header">
                             <div class="depoimento-avatar">SF</div>
                             <div class="depoimento-info">
-                                <h6>Saulo Ferreira</h6>
+                                <h3>Saulo Ferreira</h3>
                                 <small class="text-muted">1 ano atrás</small>
                             </div>
                             <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" class="google-logo">
@@ -1680,6 +1684,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Section 14 - Footer -->
     <footer class="footer py-5" id="contato">
         <div class="container">
@@ -1784,9 +1790,9 @@
     </a>
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script src="js/main.js"></script>
 </body>
 </html>
