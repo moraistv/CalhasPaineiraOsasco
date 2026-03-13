@@ -1,0 +1,35 @@
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs e editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Arquivos de log
+*.log
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.swp
+*~
+
+# Pastas de backup
+backup/
+old/
+temp/
+
+# Arquivos de configuração local
+.env
+.env.local
+
+# Node modules (se usar npm no futuro)
+node_modules/
+
+# Outros
+.cache/
+dist/

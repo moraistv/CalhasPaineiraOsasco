@@ -1,0 +1,35 @@
+# ========================================
+# ROBOTS.TXT - Calhas Paineira
+# SEO Optimized for Google Crawlers
+# ========================================
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://calhaspaineiraosasco.com.br/sitemap.xml
+
+# Crawl rate
+Crawl-delay: 10
+
+# Disallow patterns (if needed in future)
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /tmp/
+
+# Allow specific Google crawlers full access
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /

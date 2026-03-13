@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://calhaspaineiraosasco.com.br/</loc>
+    <lastmod>2025-03-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+    <image:image>
+      <image:loc>https://calhaspaineiraosasco.com.br/images/og-image.jpg</image:loc>
+      <image:title>Calhas Paineira - Especialistas em Calhas e Rufos em Osasco</image:title>
+      <image:caption>Fabricação e instalação de calhas e rufos em Osasco com 24 anos de experiência</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Seção Produtos -->
+  <url>
+    <loc>https://calhaspaineiraosasco.com.br/#produtos</loc>
+    <lastmod>2025-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  
+  <!-- Seção Serviços -->
+  <url>
+    <loc>https://calhaspaineiraosasco.com.br/#servicos</loc>
+    <lastmod>2025-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  
+  <!-- Seção Quem Somos -->
+  <url>
+    <loc>https://calhaspaineiraosasco.com.br/#quem-somos</loc>
+    <lastmod>2025-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  
+  <!-- Seção Portfólio -->
+  <url>
+    <loc>https://calhaspaineiraosasco.com.br/#portfolio</loc>
+    <lastmod>2025-03-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  
+  <!-- Seção Depoimentos -->
+  <url>
+    <loc>https://calhaspaineiraosasco.com.br/#depoimentos</loc>
+    <lastmod>2025-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  
+  <!-- Seção FAQ -->
+  <url>
+    <loc>https://calhaspaineiraosasco.com.br/#faq</loc>
+    <lastmod>2025-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  
+  <!-- Seção Contato -->
+  <url>
+    <loc>https://calhaspaineiraosasco.com.br/#contato</loc>
+    <lastmod>2025-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+</urlset>

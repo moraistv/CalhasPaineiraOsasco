@@ -1,0 +1,23 @@
+# Configuração do GitHub Pages
+title: Calhas Paineira - Osasco
+description: Especialistas em calhas e rufos em Osasco. Fabricação e instalação profissional.
+url: https://moraistv.github.io
+baseurl: /CalhasPaineiraOsasco
+
+# Configurações de build
+markdown: kramdown
+highlighter: rouge
+
+# Plugins (se necessário no futuro)
+plugins:
+  - jekyll-sitemap
+
+# Excluir arquivos do build
+exclude:
+  - README.md
+  - SEO-GUIDE.md
+  - .gitignore
+  - "*.md"
+
+# Configurações de timezone
+timezone: America/Sao_Paulo
