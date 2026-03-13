@@ -131,9 +131,11 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
         link.addEventListener('click', () => {
             const navbarCollapse = document.querySelector('.navbar-collapse');
+            const navbarToggler = document.querySelector('.navbar-toggler');
             if (navbarCollapse.classList.contains('show')) {
                 navbarCollapse.classList.remove('show');
                 document.body.classList.remove('menu-open');
+                if (navbarToggler) navbarToggler.setAttribute('aria-expanded', 'false');
             }
         });
     });
@@ -145,7 +147,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (navbarToggler && navbarCollapse) {
         navbarToggler.addEventListener('click', () => {
             setTimeout(() => {
-                if (navbarCollapse.classList.contains('show')) {
+                const isOpen = navbarCollapse.classList.contains('show');
+                navbarToggler.setAttribute('aria-expanded', isOpen);
+                if (isOpen) {
                     document.body.classList.add('menu-open');
                 } else {
                     document.body.classList.remove('menu-open');
@@ -160,8 +164,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 !navbarToggler.contains(e.target)) {
                 navbarCollapse.classList.remove('show');
                 document.body.classList.remove('menu-open');
+                navbarToggler.setAttribute('aria-expanded', 'false');
             }
         });
+        
+        // Observar mudanças na classe do menu
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.attributeName === 'class') {
+                    const isOpen = navbarCollapse.classList.contains('show');
+                    navbarToggler.setAttribute('aria-expanded', isOpen);
+                }
+            });
+        });
+        
+        observer.observe(navbarCollapse, { attributes: true });
     }
 
     // ========================================

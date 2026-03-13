@@ -2024,3 +2024,100 @@ html {
         padding: 12px 0;
     }
 }
+
+
+/* ========================================
+   MENU HAMBURGUER ANIMADO (X)
+======================================== */
+@media (max-width: 991.98px) {
+    /* Botão hamburguer customizado */
+    .navbar-toggler {
+        width: 45px;
+        height: 45px;
+        padding: 0;
+        border: none;
+        background: transparent;
+        position: relative;
+        z-index: 1060;
+    }
+    
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+    
+    /* Ícone hamburguer (3 linhas) */
+    .navbar-toggler-icon {
+        position: relative;
+        width: 25px;
+        height: 2px;
+        background-color: var(--primary);
+        display: block;
+        transition: all 0.3s ease;
+    }
+    
+    .navbar-toggler-icon::before,
+    .navbar-toggler-icon::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        background-color: var(--primary);
+        transition: all 0.3s ease;
+    }
+    
+    .navbar-toggler-icon::before {
+        top: -8px;
+    }
+    
+    .navbar-toggler-icon::after {
+        top: 8px;
+    }
+    
+    /* Transformar em X quando menu aberto */
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+        background-color: transparent;
+    }
+    
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+    
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+}
+
+/* ========================================
+   BOTÃO WHATSAPP MENU MOBILE - CORRIGIDO
+======================================== */
+@media (max-width: 991.98px) {
+    .navbar-collapse .btn-orcamento {
+        width: 55px;
+        height: 55px;
+        margin: 30px auto 0;
+        padding: 0 !important;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #25d366 !important;
+        border: 3px solid #25d366 !important;
+        color: white !important;
+        font-size: 0;
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    }
+    
+    .navbar-collapse .btn-orcamento:hover {
+        transform: scale(1.1);
+        background: #128c7e !important;
+        border-color: #128c7e !important;
+    }
+    
+    .navbar-collapse .btn-orcamento i {
+        font-size: 1.8rem;
+        margin: 0 !important;
+        color: white !important;
+    }
+}
