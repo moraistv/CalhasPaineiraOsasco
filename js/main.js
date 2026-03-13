@@ -133,9 +133,36 @@ document.addEventListener('DOMContentLoaded', function() {
             const navbarCollapse = document.querySelector('.navbar-collapse');
             if (navbarCollapse.classList.contains('show')) {
                 navbarCollapse.classList.remove('show');
+                document.body.classList.remove('menu-open');
             }
         });
     });
+    
+    // Abrir/fechar menu com overlay
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    
+    if (navbarToggler && navbarCollapse) {
+        navbarToggler.addEventListener('click', () => {
+            setTimeout(() => {
+                if (navbarCollapse.classList.contains('show')) {
+                    document.body.classList.add('menu-open');
+                } else {
+                    document.body.classList.remove('menu-open');
+                }
+            }, 10);
+        });
+        
+        // Fechar ao clicar no overlay
+        document.addEventListener('click', (e) => {
+            if (navbarCollapse.classList.contains('show') && 
+                !navbarCollapse.contains(e.target) && 
+                !navbarToggler.contains(e.target)) {
+                navbarCollapse.classList.remove('show');
+                document.body.classList.remove('menu-open');
+            }
+        });
+    }
 
     // ========================================
     // BACK TO TOP

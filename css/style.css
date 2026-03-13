@@ -1923,24 +1923,26 @@ html {
         right: -100% !important;
         width: 280px !important;
         height: 100vh !important;
-        background: #ffffff !important;
+        background-color: #ffffff !important;
         box-shadow: -5px 0 30px rgba(0,0,0,0.2) !important;
         border-radius: 0 !important;
         margin-top: 0 !important;
         padding: 80px 20px 20px !important;
         transition: right 0.3s ease-in-out !important;
-        z-index: 1040 !important;
+        z-index: 1050 !important;
         overflow-y: auto !important;
         display: block !important;
         max-height: 100vh !important;
+        border: none !important;
     }
     
     .navbar-collapse.show {
         right: 0 !important;
+        background-color: #ffffff !important;
     }
     
-    /* Overlay escuro quando menu abre */
-    .navbar-collapse::before {
+    /* Overlay escuro quando menu abre - SEPARADO */
+    body::after {
         content: '';
         position: fixed;
         top: 0;
@@ -1951,12 +1953,19 @@ html {
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s ease;
-        z-index: -1;
+        z-index: 1040;
+        pointer-events: none;
     }
     
-    .navbar-collapse.show::before {
+    body.menu-open::after {
         opacity: 1;
         visibility: visible;
+        pointer-events: auto;
+    }
+    
+    /* Garantir fundo branco em todos os elementos internos */
+    .navbar-collapse * {
+        background-color: transparent !important;
     }
     
     /* Ajustar itens do menu */
