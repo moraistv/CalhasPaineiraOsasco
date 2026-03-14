@@ -856,53 +856,58 @@ section {
     overflow: hidden;
 }
 
-.orcamento-image {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-    position: relative;
-    min-height: 600px;
+.section-orcamento {
+    padding: 40px 0;
 }
 
-.orcamento-image-content {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-    background-image: url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.orcamento-image-content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(30,90,142,0.8);
-}
-
-.orcamento-badge {
-    position: relative;
-    z-index: 2;
-    background: var(--white);
-    padding: 25px 30px;
-    border-radius: var(--radius);
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    box-shadow: var(--shadow-lg);
-}
-
-.orcamento-badge i {
-    font-size: 2.5rem;
-    color: var(--secondary);
+/* Mapa ao lado do formulário */
+.orcamento-mapa-wrapper iframe {
+    display: block;
 }
 
 .orcamento-form-wrapper {
-    padding: 50px;
+    padding: 30px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.orcamento-form-wrapper.compact {
+    padding: 25px 30px;
+}
+
+.orcamento-mapa-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.orcamento-mapa-wrapper iframe {
+    filter: grayscale(20%);
+}
+
+/* Formulário compacto */
+.compact-form .form-control,
+.compact-form .form-select {
+    font-size: 0.9rem;
+}
+
+.compact-form .form-label {
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.section-header .section-tag.small {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+}
+
+.section-header .section-title.h4 {
+    font-size: 1.4rem;
+}
+
+.section-header .section-subtitle.small {
+    font-size: 0.9rem;
 }
 
 .orcamento-form .form-control,
@@ -1196,12 +1201,12 @@ section {
         bottom: 20px;
     }
     
-    .orcamento-image {
-        min-height: 300px;
+    .orcamento-form-wrapper {
+        padding: 25px;
     }
     
-    .orcamento-form-wrapper {
-        padding: 30px;
+    .orcamento-form-wrapper.compact {
+        padding: 20px;
     }
 }
 
