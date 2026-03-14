@@ -287,6 +287,11 @@ a {
     margin-right: 20px;
 }
 
+.quick-product-card-link {
+    text-decoration: none;
+    display: block;
+}
+
 .quick-product-card {
     text-align: center;
     padding: 20px 10px;
